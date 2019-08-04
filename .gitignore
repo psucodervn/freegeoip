@@ -5,3 +5,4 @@ db.gz
 *.zip
 *.sqlite
 /vendor/*/
+cmd/freegeoip/freegeoip
