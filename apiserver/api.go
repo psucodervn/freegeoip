@@ -31,7 +31,7 @@ import (
 	"github.com/rs/cors"
 	"golang.org/x/text/language"
 
-	"github.com/apilayer/freegeoip"
+	"github.com/quantd2/freegeoip"
 )
 
 type apiHandler struct {
