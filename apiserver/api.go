@@ -31,7 +31,7 @@ import (
 	"github.com/rs/cors"
 	"golang.org/x/text/language"
 
-	"github.com/quantd2/freegeoip"
+	"github.com/psucodervn/freegeoip"
 )
 
 type apiHandler struct {
@@ -214,7 +214,11 @@ func jsonWriter(w http.ResponseWriter, r *http.Request, d *responseRecord) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(d)
+	data := map[string]interface{}{
+		"success": true,
+		"data":    d,
+	}
+	json.NewEncoder(w).Encode(data)
 }
 
 type geoipQuery struct {
